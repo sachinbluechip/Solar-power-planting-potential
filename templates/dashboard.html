@@ -1,0 +1,47 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Potential Analysis Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Solar Potential Analysis Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('upload_file') }}">Upload</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard">
+        <div class="dashboard-item">
+            <h2>Solar Potential Score by Location</h2>
+            <img src="{{ url_for('static', filename='uploads/results/solar_potential_score.png') }}" alt="Solar Potential Score">
+        </div>
+
+        <div class="dashboard-item">
+            <h2>Brightness and Shadow Heatmap</h2>
+            <img src="{{ url_for('static', filename='uploads/results/brightness_shadow_heatmap.png') }}" alt="Brightness Shadow Heatmap">
+        </div>
+
+        <div class="dashboard-item">
+            <h2>Average Brightness vs Time of Day</h2>
+            <img src="{{ url_for('static', filename='uploads/results/brightness_time_of_day.png') }}" alt="Brightness Time of Day">
+        </div>
+
+        <div class="dashboard-item">
+            <h2>Shadow vs Bright Area</h2>
+            <img src="{{ url_for('static', filename='uploads/results/shadow_vs_bright_area.png') }}" alt="Shadow vs Bright Area">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SolarSense AI</p>
+    </footer>
+</body>
+</html>
